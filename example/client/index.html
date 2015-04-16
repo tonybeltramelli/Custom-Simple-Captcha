@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="MyCaptcha example client">
+	
+	    <title>MyCaptcha Examples</title>
+	
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/common.css" rel="stylesheet">
+	</head>
+	<body>
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <a class="navbar-brand" href="#">CustomSimpleCaptcha Examples</a>
+	        </div>
+	      </div>
+	    </nav>
+	
+	    <div class="container content">
+	    	
+	    	<div id="math" class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Challenge example</h4>
+						<div>
+							<label>
+								<input type="radio" name="type" value="math" checked>
+								Math
+							</label>
+							<label>
+								<input type="radio" name="type" value="qa">
+								Q&amp;A
+							</label>
+						</div>
+					</div>
+			    	<div class="modal-body">
+						<form class="form-group">
+							<input type="text" class="form-control" placeholder="Form field">
+							<input type="text" class="form-control" placeholder="Whatever other field">	
+							<div class="challenge hide">
+								<span class="hide"></span>
+								<div></div>
+		  						<input type="text" class="form-control" placeholder="* Please answer this challenge">
+							</div>
+						</form>
+		
+						<div class="alert alert-success hide" role="alert">
+							Correct answer to challenge.
+						</div>
+						<div class="alert alert-warning hide" role="alert">
+							Wrong answer to challenge.
+						</div>
+						<div class="alert alert-danger hide" role="alert">
+							A problem occured, please try again later.
+						</div>
+						<center>
+							<img src="img/ajax-loader.gif" alt="loader"/>
+						</center>
+					</div>
+					<div class="modal-footer hide">
+						<button type="button" class="btn btn-default">
+							Update
+						</button>
+						<button type="button" class="btn btn-primary">
+							Submit
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+	    </div>
+	    
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML'></script>
+	    <script src="js/main.js"></script>
+    </body>
+</html>

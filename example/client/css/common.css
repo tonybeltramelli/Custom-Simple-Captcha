@@ -1,0 +1,49 @@
+.content {
+    margin-top: 60px;
+}
+
+.form-group input {
+    margin-bottom: 10px;
+}
+
+.form-group input:last-child, .alert {
+    margin-bottom: 0px;
+}
+
+.challenge {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    padding: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-title {
+    float: left;
+}
+
+.modal-header {
+    padding-bottom: 40px;
+}
+
+.modal-header > div {
+    float: right;
+    padding-top: 3px;
+}
+
+.modal-header label {
+    font-weight: normal;
+    margin-left: 10px;
+}
