@@ -17,14 +17,14 @@ class CustomSimpleCaptcha {
     public function getChallenge()
     {
     	$questions = $this->_getQuestions();
-		
-		$index = rand(0, count($questions) - 1);
+
+    	$index = rand(0, count($questions) - 1);
 		
 		$challenge = $questions[$index];
 		$challenge = substr($challenge, 0, strrpos($challenge, "="));
 		
 		$result = array("index" => $index, "challenge" => $challenge);
-	
+
 		return json_encode($result);
     }
 	
@@ -73,10 +73,6 @@ class CustomSimpleCaptcha {
 		
 		return json_encode($result);
 	}
-	
-    public function __destruct() 
-    {
-    }
 }
 
 ?>
