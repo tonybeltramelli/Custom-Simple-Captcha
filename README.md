@@ -1,6 +1,14 @@
 Custom Simple Captcha
 =====================
 
+![Custom Simple Captcha - screenshot 1](https://raw.githubusercontent.com/tonybeltramelli/Custom-Simple-Captcha/master/example/client/img/screenshot1.jpg)
+
+![Custom Simple Captcha - screenshot 2](https://raw.githubusercontent.com/tonybeltramelli/Custom-Simple-Captcha/master/example/client/img/screenshot2.jpg)
+
+![Custom Simple Captcha - screenshot 3](https://raw.githubusercontent.com/tonybeltramelli/Custom-Simple-Captcha/master/example/client/img/screenshot3.jpg)
+
+![Custom Simple Captcha - screenshot 4](https://raw.githubusercontent.com/tonybeltramelli/Custom-Simple-Captcha/master/example/client/img/screenshot4.jpg)
+
 This project goal is to provide a simple captcha solution protecting against automated spambots and offering a better user experience than the traditional "hard/impossible to decipher" captcha which usually cause frustrations to both the users of the service and the developers.
 
 SimpleCustomCaptcha is designed to provide flexibility to your various specific project configuration by allowing the creation of custom questions to be asked to your users. A custom solution adapted to the customer and the application field is always more suitable that one general version created for everyone.
