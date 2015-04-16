@@ -23,51 +23,51 @@ public class CustomSimpleCaptcha
 	
 	public String getChallenge() throws IOException
     {
-        String[] questions = _getQuestions();
+    	String[] questions = _getQuestions();
 
-        int index = (int) Math.round(Math.random() * (questions.length - 1));
+    	int index = (int) Math.round(Math.random() * (questions.length - 1));
 
-        String challenge = questions[index];
-        challenge = challenge.substring(0, challenge.indexOf("="));
-
-        JSONObject result = new JSONObject();
-        result.put("index", index);
-        result.put("challenge", challenge);
-
+		String challenge = questions[index];
+		challenge = challenge.substring(0, challenge.indexOf("="));
+		
+		JSONObject result = new JSONObject();
+		result.put("index", index);
+		result.put("challenge", challenge);
+		
 		return result.toJSONString();
     }
 	
 	public String checkAnswer(int index, String providedAnswer) throws IOException
 	{
-        String[] questions = _getQuestions();
+		String[] questions = _getQuestions();
+		
+		if(index >= questions.length) return _getStatusMessage(2);
+		
+		String expectedAnswer = questions[index];
+		expectedAnswer = expectedAnswer.substring(expectedAnswer.indexOf("=") + 1, expectedAnswer.length());
 
-        if(index >= questions.length) return _getStatusMessage(2);
-
-        String expectedAnswer = questions[index];
-        expectedAnswer = expectedAnswer.substring(expectedAnswer.indexOf("=") + 1, expectedAnswer.length());
-
-        Boolean isMatched = providedAnswer.toLowerCase().equals(expectedAnswer.toLowerCase());
-
+		Boolean isMatched = providedAnswer.toLowerCase().equals(expectedAnswer.toLowerCase());
+		
 		return _getStatusMessage(isMatched ? 1 : 0);
 	}
 	
 	private String[] _getQuestions() throws IOException
 	{
-        if(_questions != null) return _questions;
+		if(_questions != null) return _questions;
+		
+		Scanner file = new Scanner(new File(_challengePath)).useDelimiter("\n");
+		ArrayList<String> questions = new ArrayList<String>();
 
-        Scanner file = new Scanner(new File(_challengePath)).useDelimiter("\n");
-        ArrayList<String> questions = new ArrayList<String>();
-
-        Boolean isFirstLine = true;
-        while (file.hasNext())
-        {
-            if(!isFirstLine)
-            {
-                questions.add(file.next());
-            }else{
-                file.next();
-                isFirstLine = false;
-            }
+		Boolean isFirstLine = true;
+		while (file.hasNext())
+		{
+			if(!isFirstLine)
+			{
+				questions.add(file.next());
+			}else{
+				file.next();
+				isFirstLine = false;
+			}
         }
         file.close();
 
@@ -90,9 +90,9 @@ public class CustomSimpleCaptcha
 			default:
 				status = "error";
 		}
-
-        JSONObject result = new JSONObject();
-        result.put("status", status);
+		
+		JSONObject result = new JSONObject();
+		result.put("status", status);
 
 		return result.toJSONString();
 	}
