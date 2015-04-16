@@ -7,7 +7,7 @@
 class CustomSimpleCaptcha {
     
     private $_challengePath;
-	private $_questions;
+    private $_questions;
     
     public function __construct($challengePath) 
     {
@@ -16,7 +16,7 @@ class CustomSimpleCaptcha {
     
     public function getChallenge()
     {
-       	$questions = $this->_getQuestions();
+    	$questions = $this->_getQuestions();
 		
 		$index = rand(0, count($questions) - 1);
 		
