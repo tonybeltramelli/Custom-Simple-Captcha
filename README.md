@@ -50,7 +50,7 @@ $captcha->checkAnswer(5, "20");
 
 ##Improvement
 
-An immediate and logic improvement to this project would be the generation of image from the challenge string.
+An immediate and logic improvement to this project would be the generation of image from the challenge string. Or use Google Chart API to generate images from math equations for example. 
 
 ##Example screenshots
 
